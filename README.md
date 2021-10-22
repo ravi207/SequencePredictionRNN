@@ -21,3 +21,5 @@ model.py contains the model architecture, the current model contains an embeddin
 Once the model is trained sample.py file could be used to generate a new sequence based on the header/starter provied
 
 # Results
+
+$ python sample.py 100 --seed he said to me
