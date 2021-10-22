@@ -22,4 +22,4 @@ Once the model is trained sample.py file could be used to generate a new sequenc
 
 # Results
 
-``python sample.py 100 --seed he said to me
+``python sample.py 100 --seed he said to me ``
