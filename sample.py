@@ -1,11 +1,8 @@
 import argparse
 import os
 import json
-
 import numpy as np
-
 from model import build_model, load_weights
-
 from keras.models import Sequential, load_model
 from keras.layers import LSTM, Dropout, TimeDistributed, Dense, Activation, Embedding
 
@@ -13,6 +10,9 @@ DATA_DIR = './data'
 MODEL_DIR = './model'
 
 def build_sample_model(vocab_size):
+    '''
+    building the model arhitecture used during training
+    '''
     model = Sequential()
     model.add(Embedding(vocab_size, 512, batch_input_shape=(1, 1)))
     for i in range(3):
@@ -24,6 +24,10 @@ def build_sample_model(vocab_size):
     return model
 
 def sample(epoch, header, num_chars):
+    '''
+    this methods takes the seed/header loads the trained model
+    and generates the next sequence upto num_chars.
+    '''
     with open(os.path.join(DATA_DIR, 'char_to_idx.json')) as f:
         char_to_idx = json.load(f)
     idx_to_char = { i: ch for (ch, i) in char_to_idx.items() }
