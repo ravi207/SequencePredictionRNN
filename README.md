@@ -22,4 +22,14 @@ Once the model is trained sample.py file could be used to generate a new sequenc
 
 # Results
 
+Below is a sample result.
+
+
 ``python sample.py 100 --seed he said to me ``
+
+he said to me”  “quite so,” he answered, lighting a cigarette, and throwing himself down into an armchair. “you see, but you do not observe. the distinction is clear. for example, you have frequently seen the steps which lead up from the hall to this room.”  “frequently.”  “hur arre there in an instant, and i caught a glimpse of it as she half drew it out. when i cried out that it was a false alarm, she replaced it, glanced at the rocket, rushed from the room, and i have not seen her since. i rose, and, making
+
+Here some observations
+
+* model was able to generate a reply within proper double quotes after the seed text he said to me.
+* Since the training dataset was small so the model had faced some overfitting, hence causing some sentences to be as it is from the original text, however the interesting thing was how the model was able to create new paragraph
