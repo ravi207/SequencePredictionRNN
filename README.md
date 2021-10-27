@@ -15,6 +15,7 @@ train.py can be used to train the model the underling dataset
 # Model Architecture
 
 model.py contains the model architecture, the current model contains an embedding layer followed by 3 LSTM layers with 256 units and eventually a TimeDistributedDense Layer
+![](images/model_architecture.png)
 
 
 # Sampler
