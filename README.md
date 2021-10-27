@@ -16,6 +16,7 @@ train.py can be used to train the model the underling dataset
 
 model.py contains the model architecture, the current model contains an embedding layer followed by 3 LSTM layers with 256 units and eventually a TimeDistributedDense Layer
 
+
 # Sampler
 
 Once the model is trained sample.py file could be used to generate a new sequence based on the header/starter provied
@@ -32,4 +33,11 @@ he said to me”  “quite so,” he answered, lighting a cigarette, and throwin
 Here some observations
 
 * model was able to generate a reply within proper double quotes after the seed text he said to me.
-* Since the training dataset was small so the model had faced some overfitting, hence causing some sentences to be as it is from the original text, however the interesting thing was how the model was able to create new paragraph
+* Since the training dataset was small so the model had faced some overfitting, hence causing some sentences are picked as it is from the original text, however the interesting thing was how the model was able to create new paragraph by merging various sentences
+
+# FUTURE WORK AN REFERENCES
+
+* Currently the model is not able to generate new sentences well, increase the training set size to enable the model to learn better (current file is <1 MB)
+* Once training set size is significant, slighlty complex model architecures could be tried.
+* A special mention the [this](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) excellent Andrej Karpathy blog which gives an intuitive understanding of sequence generation problem.
+
