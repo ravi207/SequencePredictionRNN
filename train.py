@@ -70,8 +70,6 @@ def train(text, epochs=100, save_freq=10):
 
     print("Length of text:" + str(T.size)) 
 
-    steps_per_epoch = (len(text) / BATCH_SIZE - 1) / SEQ_LENGTH  
-
     log = TrainLogger('training_log.csv')
 
     for epoch in range(epochs):
