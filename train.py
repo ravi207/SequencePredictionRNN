@@ -80,9 +80,6 @@ def train(text, epochs=100, save_freq=10):
         losses, accs = [], []
 
         for i, (X, Y) in enumerate(read_batches(T, vocab_size)):
-            
-            print(X);
-
             loss, acc = model.train_on_batch(X, Y)
             print('Batch {}: loss = {}, acc = {}'.format(i + 1, loss, acc))
             losses.append(loss)
